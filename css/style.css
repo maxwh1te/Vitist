@@ -1,0 +1,804 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+a, abbr, acronym, address, article, aside,
+blockquote, body, code, dd, del, details,
+dfn, dialog, div, dl, dt, em,
+fieldset, figcaption, figure, footer, form,
+h1, h2, h3, h4, h5, h6, header, hgroup, html,
+iframe, img, label, legend,
+li, menu, nav, object, ol, p, pre, q, section,
+span, summary, ul {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+@font-face {
+  font-family: 'Gotham Pro Regular';
+  src: url("../fonts/GothamPro.eot");
+  src: url("../fonts/GothamPro.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro.woff") format("woff"), url("../fonts/GothamPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Gotham Pro Black';
+  src: url("../fonts/GothamPro-Black.eot");
+  src: url("../fonts/GothamPro-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Black.woff") format("woff"), url("../fonts/GothamPro-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Gotham Pro Bold';
+  src: url("../fonts/GothamPro-Bold.eot");
+  src: url("../fonts/GothamPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Bold.woff") format("woff"), url("../fonts/GothamPro-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+html, body {
+  height: 100%;
+  margin: 0; }
+
+body a {
+  text-decoration: none;
+  color: #171717; }
+
+.flexAround {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.flexBetween {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+
+.flexStart {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start; }
+
+.wpapper-push {
+  min-height: 100%; }
+
+header {
+  position: relative;
+  margin: 0 auto; }
+
+.container {
+  background: url("../img/backgroundHeader.png") no-repeat center;
+  height: 938px;
+  position: relative; }
+
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 30px; }
+
+.headerTop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 20; }
+
+.headerTop-content {
+  padding: 25px 30px 23px 30px; }
+
+.menuCatalog {
+  padding: 1px 0 0 0;
+  margin: 0 110px 0 0; }
+  .menuCatalog > ul {
+    list-style-type: none; }
+    .menuCatalog > ul > li.headNav {
+      display: inline-block;
+      margin: 0 28px 0 0; }
+      .menuCatalog > ul > li.headNav a {
+        font-size: 14px;
+        transition: 0.1s; }
+        .menuCatalog > ul > li.headNav a:hover {
+          color: #f2b743; }
+
+.dropArrowYellow {
+  background: url(../img/chevronArrowDownYellow.svg) no-repeat;
+  background-size: 10px;
+  padding: 0 17px 4px 0;
+  background-position: center right; }
+
+.dropArrowBlack {
+  background: url(../img/chevronArrowDownBlack.svg) no-repeat;
+  background-size: 10px;
+  padding: 0 17px 4px 0;
+  background-position: top 5px right; }
+
+.dropMenu {
+  display: none;
+  position: absolute;
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #fff;
+  top: 102px;
+  left: 0;
+  right: 0; }
+  .dropMenu .dropMenu-content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 25px 0 30px; }
+    .dropMenu .dropMenu-content .dropMenuLinks {
+      margin: 0 154px 0 0; }
+    .dropMenu .dropMenu-content ul {
+      list-style-type: none; }
+      .dropMenu .dropMenu-content ul li {
+        margin: 0 0 12px 0; }
+        .dropMenu .dropMenu-content ul li a {
+          font-family: "Gotham Pro Bold";
+          font-size: 14px; }
+          .dropMenu .dropMenu-content ul li a:hover {
+            color: #f2b743;
+            text-decoration: underline; }
+
+.dropMenu.active {
+  display: block; }
+
+.active {
+  display: block; }
+
+.headInfo {
+  padding: 7px 0 0 3px; }
+
+.burgerMenuToggle {
+  display: inline-block;
+  width: 23px;
+  height: 24px;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none; }
+  .burgerMenuToggle span, .burgerMenuToggle span:before, .burgerMenuToggle span:after {
+    width: 24px;
+    height: 3px;
+    background-color: #171717; }
+  .burgerMenuToggle:hover span, .burgerMenuToggle:hover span:before, .burgerMenuToggle:hover span:after {
+    background: #ebb03d; }
+
+.burgerMenuToggle span {
+  position: relative;
+  display: block;
+  margin: auto; }
+
+.burgerMenuToggle span:before, .burgerMenuToggle span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -9px; }
+
+.burgerMenuToggle span:after {
+  top: 9px; }
+
+.menuRight-swich {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0 0 0;
+  margin: 0 53px 0 0; }
+  .menuRight-swich .money {
+    position: relative;
+    margin: 0 23px 0 0; }
+  .menuRight-swich .languages {
+    position: relative; }
+
+.money a, .languages a {
+  font-family: "Gotham Pro Bold";
+  font-size: 14px; }
+  .money a:hover, .languages a:hover {
+    color: #f2b743; }
+
+.cartLink {
+  margin: 0 26px 0 0;
+  position: relative; }
+  .cartLink .cartIndex {
+    position: absolute;
+    width: 20px;
+    height: 19px;
+    bottom: 2px;
+    right: 16px;
+    text-align: center;
+    border-radius: 50px;
+    background: #ebb03d;
+    font-size: 15px;
+    padding: 1px 0 0 0; }
+
+.loginLink {
+  margin: 0 38px 0 0; }
+
+.searchIcon {
+  margin: 0 26px 0 0; }
+
+.headInfo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  font-family: 'Gotham Pro Bold'; }
+
+.menuRight {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  font-family: 'Gotham Pro Bold'; }
+
+.headerContent {
+  position: relative;
+  width: inherit;
+  height: inherit; }
+
+.headerContent-text {
+  font-family: 'Gotham Pro Black';
+  position: absolute;
+  top: 32%;
+  right: 9.5%; }
+  .headerContent-text h1 {
+    text-transform: uppercase;
+    color: #ebb03d;
+    font-size: 92px;
+    padding: 0 0 0 66px; }
+  .headerContent-text p {
+    letter-spacing: 1px;
+    font-size: 49px;
+    word-spacing: -2px;
+    margin: 0 0 17.5% 0; }
+    .headerContent-text p span {
+      content: '';
+      display: inline-block;
+      width: 38px;
+      margin: 0 32px 12px 0;
+      height: 3px;
+      background: #171717; }
+  .headerContent-text a {
+    font-size: 16px;
+    background: #ebb03d;
+    padding: 26px 51px;
+    margin: 0 0 0 13%;
+    border-radius: 50px; }
+    .headerContent-text a:hover {
+      background: #171717;
+      color: #fff; }
+    .headerContent-text a span {
+      content: "";
+      display: inline-block;
+      background: url("../img/sprite.png") no-repeat -209px -14px;
+      width: 7px;
+      height: 9px;
+      margin: 0 0 0 7px; }
+
+.popUpMenu {
+  position: absolute;
+  background: #ebb03d;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: 0.5s; }
+
+.popUpMenu.active {
+  transform: translateX(0);
+  visibility: visible; }
+
+.popUp-contentMenu {
+  display: none;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  padding: 14% 0 0 0;
+  margin: 0 0 5% 0; }
+  .popUp-contentMenu ul {
+    list-style-type: none; }
+    .popUp-contentMenu ul li {
+      margin: 0 0 15px 0; }
+      .popUp-contentMenu ul li a {
+        font-size: 34px;
+        font-family: "Gotham Pro bold"; }
+
+.popUp-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  height: 100%; }
+  .popUp-item ul {
+    list-style-type: none; }
+    .popUp-item ul li {
+      margin: 0 0 30px; }
+      .popUp-item ul li a {
+        font-family: "Gotham Pro Bold";
+        font-size: 50px;
+        padding: 22px 32px;
+        transition: 0.2s; }
+        .popUp-item ul li a:hover {
+          background: #000;
+          color: #fff; }
+  .popUp-item img {
+    width: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 5%; }
+
+.popUp-head,
+.popUp-Phones {
+  display: none; }
+
+.container-body {
+  background-image: url("../img/seoPhoto2.png"), url("../img/rectangle.png"), url("../img/triangleBottom.png"), url("../img/triangleTop.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom left, bottom right, 0 593px;
+  max-width: 1920px;
+  margin: 0 auto; }
+
+.seoContainer {
+  padding: 40px 0 0 0;
+  display: flex;
+  justify-content: flex-end; }
+
+.seoBox-content {
+  width: 60%;
+  padding: 58px 0 0 21px;
+  margin: 0 0 50px 0; }
+  .seoBox-content h2 {
+    font-family: 'Gotham Pro Black';
+    font-size: 50px;
+    text-transform: uppercase;
+    line-height: 59px;
+    margin: 0 0 43px 0; }
+  .seoBox-content p {
+    font-family: 'Gotham Pro Regular';
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0 84px 0 189px; }
+
+.seoBox-content:first-child p {
+  margin: 0 0 10px 0; }
+
+.clotherBox-content {
+  padding: 73px 0 0 0;
+  margin: 0 0 39px 0; }
+
+.clotherContainer {
+  padding: 50px 0 0 0;
+  position: relative; }
+
+.imgClother {
+  padding: 100% 0 0 0;
+  position: relative; }
+  .imgClother img {
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%; }
+
+.owl-carousel .owl-item img {
+  width: inherit; }
+
+.textClother {
+  padding: 50px 40px;
+  text-align: center; }
+
+.discount {
+  position: absolute;
+  padding: 23px 7px;
+  background: #f2b743;
+  border-radius: 50px;
+  font-family: "Gotham Pro Black";
+  font-size: 23px;
+  top: 1%;
+  left: 14%; }
+
+.clocherDesc, .clocherPrice, .clotherCart {
+  font-family: "Gotham Pro Black"; }
+
+.clocherDesc {
+  font-size: 23px;
+  margin: 0 0 22px 0; }
+  .clocherDesc:hover {
+    text-decoration: underline; }
+
+.clocherPrice {
+  font-size: 40px;
+  padding: 0 0 0 29px;
+  margin: 0 0 13px 0; }
+
+.optRoz {
+  font-family: "Gotham Pro Regular";
+  font-size: 15px; }
+
+.clocherPriceOther {
+  font-family: "Gotham Pro Regular";
+  font-size: 30px;
+  padding: 0 60px;
+  position: relative;
+  margin: 0 0 47px 0; }
+
+.priceCancell {
+  display: inline-block; }
+  .priceCancell:before {
+    content: "";
+    position: absolute;
+    width: 41%;
+    left: 60px;
+    bottom: 17px;
+    border-bottom: 4px solid #f2b743;
+    transform: skewY(-10deg); }
+
+.clotherCart {
+  position: relative;
+  font-size: 15px;
+  background: #f2b743;
+  padding: 20px 72px 20px 44px;
+  border-radius: 50px;
+  transition: 0.2s; }
+  .clotherCart:hover {
+    background: #1e1e1e;
+    color: #fff; }
+    .clotherCart:hover:after {
+      content: "";
+      display: inline-block;
+      background: url("../img/sprite.png") no-repeat -106px -9px;
+      width: 22px;
+      height: 22px;
+      top: 14px;
+      right: 40px; }
+  .clotherCart:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: url(../img/sprite.png) no-repeat -74px -36px;
+    width: 22px;
+    height: 22px;
+    top: 14px;
+    right: 40px; }
+
+.owl-nav {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+  outline: none; }
+
+.owl-prev {
+  outline: none; }
+  .owl-prev span:before {
+    content: "";
+    display: inline-block;
+    background: url("../img/sprite.png") no-repeat -6px -7px;
+    width: 28px;
+    height: 47px; }
+
+.owl-next {
+  position: absolute;
+  right: 0;
+  outline: none; }
+  .owl-next span:after {
+    content: "";
+    display: inline-block;
+    background: url("../img/sprite.png") no-repeat -39px -7px;
+    width: 26px;
+    height: 47px; }
+
+.linkCatalog {
+  font-size: 14.14px;
+  font-family: 'Gotham Pro Regular';
+  text-align: center; }
+  .linkCatalog a {
+    position: relative; }
+    .linkCatalog a:hover {
+      text-decoration: underline; }
+    .linkCatalog a:after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      background: url("../img/sprite.png") no-repeat -148px -47px;
+      width: 6px;
+      height: 9px;
+      bottom: 2px;
+      left: 104%; }
+
+.footer,
+.push {
+  height: 251px; }
+
+.footer {
+  background: #1e1e1e; }
+
+.footer-main {
+  border-bottom: 1px solid #353535; }
+
+.footer-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px 0 37px 0; }
+
+.footer-logo {
+  padding: 0 183px 0  0; }
+
+.footTopLink {
+  margin: 0 0 35px 0; }
+  .footTopLink ul {
+    list-style-type: none; }
+    .footTopLink ul li {
+      display: inline-block;
+      margin: 0 35px 0 0; }
+      .footTopLink ul li a {
+        font-family: "Gotham Pro Regular";
+        font-size: 14px;
+        color: #8f8f8f; }
+        .footTopLink ul li a:hover {
+          text-decoration: underline; }
+
+.footDownCont {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap; }
+
+.footPhones {
+  font-family: "Gotham Pro Regular";
+  font-size: 14px;
+  color: #e1e1e1;
+  margin: 0 56px 0 0; }
+
+.btnQuestion {
+  margin: 8px 58px 0 0; }
+  .btnQuestion a {
+    font-family: "Gotham Pro Bold";
+    font-size: 15px;
+    color: #171717;
+    padding: 18px 37px;
+    border-radius: 50px;
+    background: #ebad38; }
+    .btnQuestion a:hover {
+      background: #808080;
+      color: #fff; }
+
+.facebook {
+  margin: 0 23px 0 0; }
+  .facebook:after {
+    content: "";
+    display: inline-block;
+    background: url("../img/sprite.png") no-repeat -110px -36px;
+    width: 14px;
+    height: 26px; }
+
+.instagram:after {
+  content: "";
+  display: inline-block;
+  background: url("../img/sprite.png") no-repeat -142px -10px;
+  width: 23px;
+  height: 22px; }
+
+.license-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: "Gotham Pro Regular";
+  padding: 27px 0 23px;
+  color: #8f8f8f; }
+
+.developer a {
+  color: #8f8f8f;
+  font-size: 14px;
+  font-family: "Gotham Pro Regular"; }
+  .developer a:hover {
+    text-decoration: underline; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  position: absolute; }
+
+@media (max-width: 1199px) {
+  .menuCatalog {
+    display: none; }
+
+  .popUp-contentMenu {
+    display: flex; }
+
+  .popUp-item {
+    height: auto; }
+    .popUp-item ul li {
+      margin: 0 0 20px; }
+      .popUp-item ul li a {
+        font-family: "Gotham Pro Bold";
+        font-size: 25px; }
+
+  .clocherDesc {
+    font-size: 20px;
+    margin: 0; }
+
+  .clocherPriceOther {
+    padding: 0; }
+
+  .priceCancell:before {
+    width: 65%;
+    left: 1px; }
+
+  .seoBox-content {
+    width: 85%; } }
+@media (max-width: 768px) {
+  .seoBox-content h2 {
+    font-size: 36px; }
+
+  .seoBox-content p {
+    padding: 0 84px 0 90px; }
+
+  .imgClother {
+    padding: 60% 0 0 0; }
+
+  .clotherContainer,
+  .clotherBox-content {
+    padding: 0; }
+
+  .discount {
+    left: 25%; }
+
+  .footer-logo {
+    padding: 0 60px 0 0; }
+
+  .footer-content {
+    padding: 20px 0 0 0; }
+
+  .footTopLink {
+    display: none; } }
+@media (max-width: 575.98px) {
+  .headerTop-content {
+    padding: 25px 20px 23px; }
+
+  .menuRight :nth-child(1) {
+    order: 2; }
+
+  .menuRight :nth-child(2) {
+    order: 3; }
+
+  .menuRight :nth-child(3) {
+    order: 4; }
+
+  .menuRight :nth-child(4) {
+    order: 5; }
+
+  .menuRight :nth-child(5) {
+    order: 1; }
+
+  .menuRight-swich .money {
+    margin: 0; }
+
+  .menuRight div {
+    margin: 0 23px 0 0; }
+
+  .menuRight-swich .languages {
+    display: none; }
+
+  .popUp-item img {
+    top: 1%; }
+
+  .headerContent-text p {
+    letter-spacing: 1px;
+    font-size: 30px;
+    word-spacing: -2px;
+    margin: 0 0 11.5% 0; }
+  .headerContent-text a {
+    padding: 10px;
+    margin: 0 0 0 25%; }
+
+  .seoBox-content h2 {
+    font-size: 24px;
+    line-height: normal;
+    margin: 0 0 15px 0; }
+
+  .footPhones {
+    margin: 0 17px 0 0; }
+
+  .footer-logo {
+    padding: 0 17px 0 0; }
+
+  .btnQuestion {
+    margin: 8px 15px 0 0; }
+    .btnQuestion a {
+      padding: 10px 11px; }
+
+  .footer, .push {
+    height: 220px; } }
+@media (max-width: 480px) {
+  .seoBox-content p {
+    padding: 0; }
+
+  .footPhones {
+    display: none; } }
+@media (max-width: 320px) {
+  .container {
+    background: #80808038;
+    height: 576px; }
+
+  .headerContent {
+    display: none; }
+
+  .headerTop-content {
+    padding: 15px 10px; }
+
+  .menuRight div {
+    margin: 0 9px 0 0; }
+
+  .menuRight :nth-child(1) {
+    order: 4; }
+
+  .menuRight :nth-child(3) {
+    order: 3; }
+
+  .cartLink .cartIndex {
+    right: 2px; }
+
+  .popUp-head {
+    display: block; }
+
+  .popUp-logo {
+    padding: 10px; }
+    .popUp-logo .languages {
+      margin: 15px 0 0 40px; }
+
+  .popUp-contentMenu {
+    padding: 8% 0;
+    background: #000000; }
+
+  .popUp-contentMenu ul li a {
+    font-size: 18px;
+    color: #8f8f8f; }
+
+  .popUp-item ul li {
+    margin: 0 0 12px; }
+
+  .popUp-Phones {
+    font-family: "Gotham Pro Bold";
+    font-size: 20px;
+    display: block; }
+
+  .seoBox-content {
+    width: 100%; }
+
+  .clocherPrice {
+    font-size: 29px;
+    padding: 0; }
+
+  .clocherPriceOther {
+    font-size: 20px; }
+
+  .priceCancell:before {
+    width: 30%;
+    bottom: 8px; }
+
+  .clotherCart {
+    padding: 15px 40px 15px 23px; }
+    .clotherCart:after {
+      top: 11px;
+      right: 15px; }
+
+  .discount {
+    font-size: 12px;
+    padding: 12px 3px; }
+
+  .footer-container {
+    justify-content: space-around; }
+    .footer-container:after {
+      top: 10px;
+      right: 14px; }
+
+  .btnQuestion {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */
