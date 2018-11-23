@@ -39,9 +39,11 @@ html, body {
   height: 100%;
   margin: 0; }
 
-body a {
-  text-decoration: none;
-  color: #171717; }
+body {
+  font-family: "Gotham Pro Regular"; }
+  body a {
+    text-decoration: none;
+    color: #171717; }
 
 .flexAround {
   display: flex;
@@ -86,7 +88,6 @@ header {
   padding: 25px 30px 23px 30px; }
 
 .menuCatalog {
-  padding: 1px 0 0 0;
   margin: 0 110px 0 0; }
   .menuCatalog > ul {
     list-style-type: none; }
@@ -108,7 +109,7 @@ header {
 .dropArrowBlack {
   background: url(../img/chevronArrowDownBlack.svg) no-repeat;
   background-size: 10px;
-  padding: 0 17px 4px 0;
+  padding: 0 17px 0 0;
   background-position: top 5px right; }
 
 .dropMenu {
@@ -144,7 +145,11 @@ header {
   display: block; }
 
 .headInfo {
-  padding: 7px 0 0 3px; }
+  padding: 5px 0 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  font-family: 'Gotham Pro Bold'; }
 
 .burgerMenuToggle {
   display: inline-block;
@@ -178,8 +183,6 @@ header {
 
 .menuRight-swich {
   display: flex;
-  justify-content: space-between;
-  padding: 2px 0 0 0;
   margin: 0 53px 0 0; }
   .menuRight-swich .money {
     position: relative;
@@ -214,17 +217,10 @@ header {
 .searchIcon {
   margin: 0 26px 0 0; }
 
-.headInfo {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  font-family: 'Gotham Pro Bold'; }
-
 .menuRight {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  font-family: 'Gotham Pro Bold'; }
+  justify-content: space-between; }
 
 .headerContent {
   position: relative;
@@ -239,13 +235,12 @@ header {
   .headerContent-text h1 {
     text-transform: uppercase;
     color: #ebb03d;
-    font-size: 92px;
-    padding: 0 0 0 66px; }
+    font-size: 92px; }
   .headerContent-text p {
     letter-spacing: 1px;
     font-size: 49px;
     word-spacing: -2px;
-    margin: 0 0 17.5% 0; }
+    margin: 0 0 20.5% -68px; }
     .headerContent-text p span {
       content: '';
       display: inline-block;
@@ -257,7 +252,6 @@ header {
     font-size: 16px;
     background: #ebb03d;
     padding: 26px 51px;
-    margin: 0 0 0 13%;
     border-radius: 50px; }
     .headerContent-text a:hover {
       background: #171717;
@@ -353,7 +347,7 @@ header {
     font-family: 'Gotham Pro Black';
     font-size: 50px;
     text-transform: uppercase;
-    line-height: 59px;
+    line-height: 1.2;
     margin: 0 0 43px 0; }
   .seoBox-content p {
     font-family: 'Gotham Pro Regular';
@@ -552,12 +546,16 @@ header {
   font-family: "Gotham Pro Regular";
   font-size: 14px;
   color: #e1e1e1;
+  padding: 5px 0 0 0;
   margin: 0 56px 0 0; }
+  .footPhones p:first-child {
+    margin-bottom: 5px; }
 
 .btnQuestion {
-  margin: 8px 58px 0 0; }
+  margin: 0 58px 0 0; }
   .btnQuestion a {
     font-family: "Gotham Pro Bold";
+    display: inline-block;
     font-size: 15px;
     color: #171717;
     padding: 18px 37px;
@@ -566,6 +564,14 @@ header {
     .btnQuestion a:hover {
       background: #808080;
       color: #fff; }
+
+.socialLink {
+  padding: 10px 0 0 0; }
+
+.socialLinkList ul {
+  list-style-type: none; }
+  .socialLinkList ul li {
+    display: inline-block; }
 
 .facebook {
   margin: 0 23px 0 0; }
